@@ -1,0 +1,72 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Id, style: "display: block" %>
+    <%= form.text_field :Id %>
+  </div>
+
+  <div>
+    <%= form.label :Name, style: "display: block" %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div>
+    <%= form.label :Room, style: "display: block" %>
+    <%= form.text_field :Room %>
+  </div>
+
+  <div>
+    <%= form.label :IdBook, style: "display: block" %>
+    <%= form.text_field :IdBook %>
+  </div>
+
+  <div>
+    <%= form.label :NameBook, style: "display: block" %>
+    <%= form.text_field :NameBook %>
+  </div>
+
+  <div>
+    <%= form.label :Author, style: "display: block" %>
+    <%= form.text_field :Author %>
+  </div>
+
+  <div>
+    <%= form.label :CategoryBook, style: "display: block" %>
+    <%= form.text_field :CategoryBook %>
+  </div>
+
+  <div>
+    <%= form.label :IdBM, style: "display: block" %>
+    <%= form.text_field :IdBM %>
+  </div>
+
+  <div>
+    <%= form.label :DateBorrow, style: "display: block" %>
+    <%= form.text_field :DateBorrow %>
+  </div>
+
+  <div>
+    <%= form.label :DateBack, style: "display: block" %>
+    <%= form.text_field :DateBack %>
+  </div>
+
+  <div>
+    <%= form.label :numberDate, style: "display: block" %>
+    <%= form.text_field :numberDate %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

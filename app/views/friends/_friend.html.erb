@@ -1,0 +1,11 @@
+<tr id="<%= dom_id friend %>">
+  <%# <th scope="row">friend.id</th> %>
+  <td><%= friend.name %></td>
+  <td><%= friend.phone %></td>
+  <td><%= friend.email %></td>
+  <td>
+    <%= link_to "Show", friend, class: 'btn btn-info' %>
+    <%= link_to "New", new_friend_path, class: 'btn btn-primary' %>
+    <%= button_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+  </>
+</tr>

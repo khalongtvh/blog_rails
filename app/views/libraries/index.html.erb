@@ -1,0 +1,47 @@
+<p style="color: green"><%= notice %></p>
+<h1>Libraries</h1>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Mã HS</th>
+      <th scope="col">Họ và Tên</th>
+      <th scope="col">Lớp</th>
+      <th scope="col">Mã Sách</th>
+      <th scope="col">Tên Sách</th>
+      <th scope="col">Tên Tác Giả</th>
+      <th scope="col">Tủ Sách</th>
+      <th scope="col">Số BM </th>
+      <th scope="col">Ngày Mượn</th>
+      <th scope="col">Ngày Trả</th>
+      <th scope="col">Số Ngày</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @libraries.each do |library| %>
+      <%# <%= render library %>
+      <tr id="<%= dom_id library %>">
+        <td><%= library.IdStudent_229 %></td>
+        <td><%= library.NameStudent_229 %></td>
+        <td><%= library.RoomStudent_229 %></td>
+        <td><%= library.IdBook_229 %></td>
+        <td><%= library.NameBook_229 %></td>
+        <td><%= library.Author_229 %></td>
+        <td><%= library.CategoryBook_229 %></td>
+        <td><%= library.IdBM_229 %></td>
+        <td><%= library.DateBorrow_229 %></td>
+        <td><%= library.DateBack_229 %></td>
+        <td><%= library.numberDate_229 %></td>
+        <td>
+          <%= link_to "Show", library, class: 'btn btn-outline-info' %>
+        </td>
+        <td>
+          <%= button_to 'Delete', library, method: :delete, class: "btn btn-outline-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%# <div id="libraries"> %>
+<%# </div> %>
+<%= link_to "New library", new_library_path, class: 'btn btn-outline-primary' %>
